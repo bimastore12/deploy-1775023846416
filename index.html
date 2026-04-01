@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>SEARCH GROUP BIMA | 500+ Grup WhatsApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0c15;
+            color: #eef2ff;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        /* Background gradient premium */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 30%, #0f121f, #03050b);
+            z-index: -2;
+        }
+
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(34, 197, 94, 0.2);
+            border-radius: 50%;
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .app-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            max-width: 700px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            background: rgba(8, 10, 18, 0.75);
+            backdrop-filter: blur(12px);
+            border-left: 1px solid rgba(34, 197, 94, 0.1);
+            border-right: 1px solid rgba(34, 197, 94, 0.1);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 20px 20px 12px;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+            flex-shrink: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(59, 130, 246, 0.2));
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .logo-icon i {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #22c55e, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, #22c55e, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tagline {
+            font-size: 0.7rem;
+            color: #6c7293;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 600;
+        }
+
+        .badge-max {
+            background: rgba(245, 158, 11, 0.12);
+            border-color: rgba(245, 158, 11, 0.3);
+            color: #fbbf24;
+        }
+
+        /* Search Section */
+        .search-section {
+            padding: 16px 16px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            flex-shrink: 0;
+        }
+
+        .search-box {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border-radius: 3rem;
+            padding: 5px 5px 5px 22px;
+            display: flex;
+            gap: 10px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            transition: all 0.3s;
+        }
+
+        .search-box:focus-within {
+            border-color: #22c55e;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+        }
+
+        .search-box input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 0;
+            font-size: 0.95rem;
+            color: white;
+            outline: none;
+        }
+
+        .search-box input::placeholder {
+            color: #4a4f6e;
+        }
+
+        .search-box button {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border: none;
+            padding: 10px 32px;
+            border-radius: 3rem;
+            color: #0a0c15;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: transform 0.1s;
+        }
+
+        .search-box button:active {
+            transform: scale(0.96);
+        }
+
+        .quick-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+            justify-content: center;
+        }
+
+        .tag {
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            color: #9ca3af;
+            transition: all 0.2s;
+        }
+
+        .tag:hover,
+        .tag:active {
+            background: rgba(34, 197, 94, 0.2);
+            color: #86efac;
+            transform: translateY(-1px);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(59, 130, 246, 0.03));
+            border-radius: 1.2rem;
+            padding: 10px 18px;
+            margin: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border: 1px solid rgba(34, 197, 94, 0.15);
+            backdrop-filter: blur(8px);
+            flex-shrink: 0;
+        }
+
+        .stats-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .total-badge {
+            background: rgba(34, 197, 94, 0.2);
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-weight: 700;
+            color: #22c55e;
+            font-size: 0.75rem;
+        }
+
+        /* Results Container */
+        .results-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 8px 16px 16px;
+            scrollbar-width: thin;
+            min-height: 0;
+            scroll-behavior: smooth;
+        }
+
+        .results-container::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .results-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .results-container::-webkit-scrollbar-thumb {
+            background: #22c55e;
+            border-radius: 10px;
+        }
+
+        /* Group Card */
+        .group-card {
+            background: linear-gradient(135deg, rgba(18, 22, 35, 0.8), rgba(12, 15, 25, 0.7));
+            backdrop-filter: blur(12px);
+            border-radius: 1.2rem;
+            margin-bottom: 12px;
+            border: 1px solid rgba(34, 197, 94, 0.15);
+            transition: all 0.25s;
+        }
+
+        .group-card:hover {
+            transform: translateX(5px);
+            border-color: rgba(34, 197, 94, 0.4);
+            background: rgba(18, 22, 40, 0.9);
+        }
+
+        .group-card-inner {
+            display: flex;
+            gap: 14px;
+            padding: 12px 14px;
+        }
+
+        .group-thumb {
+            width: 60px;
+            height: 60px;
+            border-radius: 1rem;
+            object-fit: cover;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            flex-shrink: 0;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .group-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .group-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .group-name i {
+            color: #22c55e;
+            font-size: 0.8rem;
+        }
+
+        .group-category {
+            background: rgba(34, 197, 94, 0.12);
+            font-size: 0.55rem;
+            padding: 2px 10px;
+            border-radius: 20px;
+            color: #86efac;
+        }
+
+        .desc-text {
+            font-size: 0.7rem;
+            line-height: 1.4;
+            color: #9ca3af;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .link-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-join,
+        .btn-copy {
+            padding: 5px 16px;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-join {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #0a0c15;
+            border: none;
+        }
+
+        .btn-join:active {
+            transform: scale(0.96);
+        }
+
+        .btn-copy {
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+        }
+
+        .btn-copy:active {
+            background: rgba(59, 130, 246, 0.25);
+        }
+
+        /* Pagination Navigation */
+        .pagination-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 16px 0 8px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 60px;
+            padding: 8px 16px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .nav-arrow {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #0a0c15;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-arrow:active {
+            transform: scale(0.92);
+        }
+
+        .nav-arrow.disabled {
+            opacity: 0.35;
+            pointer-events: none;
+            background: #334155;
+        }
+
+        .page-indicator {
+            background: rgba(34, 197, 94, 0.15);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #86efac;
+            text-align: center;
+        }
+
+        .btn-reset {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #fecaca;
+            padding: 10px 16px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            text-align: center;
+            width: 100%;
+            margin-top: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-reset:active {
+            background: rgba(239, 68, 68, 0.25);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(34, 197, 94, 0.2);
+            border-top: 3px solid #22c55e;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .no-result {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c7293;
+        }
+
+        /* Bottom Menu */
+        .bottom-menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 10px;
+            background: rgba(5, 8, 18, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(34, 197, 94, 0.25);
+            flex-shrink: 0;
+        }
+
+        .bottom-menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            cursor: pointer;
+            padding: 6px 12px;
+            border-radius: 40px;
+            color: #6c7293;
+            transition: all 0.2s;
+        }
+
+        .bottom-menu-item i {
+            font-size: 1.2rem;
+        }
+
+        .bottom-menu-item span {
+            font-size: 0.6rem;
+            font-weight: 500;
+        }
+
+        .bottom-menu-item.active {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+        }
+
+        /* Other Sections */
+        .section-header {
+            padding: 12px 16px;
+            background: rgba(34, 197, 94, 0.08);
+            border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header h3 {
+            font-size: 1rem;
+            color: #22c55e;
+        }
+
+        .livegroup-list,
+        .chat-messages,
+        .support-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+        }
+
+        .support-item {
+            background: rgba(34, 197, 94, 0.06);
+            border-radius: 1rem;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(34, 197, 94, 0.15);
+        }
+
+        .support-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #229ed9, #0f6b9e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+        }
+
+        .support-info h4 {
+            font-size: 0.9rem;
+            color: #86efac;
+            margin-bottom: 4px;
+        }
+
+        .support-info p {
+            font-size: 0.7rem;
+            color: #9ca3af;
+        }
+
+        .chat-input-area {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(5, 8, 18, 0.9);
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 2rem;
+            padding: 10px 16px;
+            color: white;
+            outline: none;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 8px 14px;
+            border-radius: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .message-own {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #0a0c15;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message-other {
+            background: rgba(30, 41, 59, 0.8);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(16px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-menu {
+            background: rgba(12, 15, 28, 0.98);
+            border-radius: 2rem;
+            width: 85%;
+            max-width: 380px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .modal-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .modal-header h3 {
+            font-size: 1.2rem;
+            color: #22c55e;
+        }
+
+        .login-panel {
+            padding: 20px;
+        }
+
+        .login-input,
+        .modal-menu input,
+        .modal-menu textarea {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            border-radius: 1rem;
+            padding: 12px 16px;
+            width: 100%;
+            color: white;
+            margin-bottom: 12px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .login-btn {
+            background: #22c55e;
+            color: #0a0c15;
+            border: none;
+            padding: 12px;
+            border-radius: 1rem;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .close-modal {
+            padding: 14px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ef4444;
+            cursor: pointer;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #22c55e;
+            color: #0a0c15;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            z-index: 1500;
+            animation: fadeOut 2s ease;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 0;
+                bottom: 70px;
+            }
+            15% {
+                opacity: 1;
+                bottom: 90px;
+            }
+            85% {
+                opacity: 1;
+                bottom: 90px;
+            }
+            100% {
+                opacity: 0;
+                bottom: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo h1 {
+                font-size: 1.4rem;
+            }
+
+            .group-thumb {
+                width: 50px;
+                height: 50px;
+            }
+
+            .search-box button span {
+                display: none;
+            }
+
+            .search-box button {
+                padding: 10px 20px;
+            }
+
+            .nav-arrow {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+
+            .page-indicator {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bg-gradient"></div>
+<div class="bg-noise"></div>
+<div class="particles" id="particles"></div>
+
+<div class="app-container">
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon"><i class="fab fa-whatsapp"></i></div>
+            <h1>SEARCH GROUP BIMA</h1>
+        </div>
+        <div class="tagline">
+            <span class="badge"><i class="fas fa-infinity"></i> MAX 500 GRUP</span>
+            <span class="badge badge-max"><i class="fas fa-layer-group"></i> 10/HALAMAN</span>
+            <span class="badge"><i class="fas fa-database"></i> EDEPOINT</span>
+        </div>
+    </div>
+
+    <div id="searchSection" style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari grup... jual beli, motor, freelance..." value="jual beli">
+                <button id="searchBtn"><i class="fas fa-search"></i><span>Cari</span></button>
+            </div>
+            <div class="quick-tags">
+                <div class="tag" data-query="jual beli">🏪 Jual Beli</div>
+                <div class="tag" data-query="motor">🏍️ Motor</div>
+                <div class="tag" data-query="mobil">🚗 Mobil</div>
+                <div class="tag" data-query="properti">🏠 Properti</div>
+                <div class="tag" data-query="freelance">💻 Freelance</div>
+                <div class="tag" data-query="kuliner">🍜 Kuliner</div>
+                <div class="tag" data-query="fashion">👕 Fashion</div>
+                <div class="tag" data-query="gadget">📱 Gadget</div>
+                <div class="tag" data-query="gaming">🎮 Gaming</div>
+                <div class="tag" data-query="bisnis">💼 Bisnis</div>
+            </div>
+        </div>
+        <div id="statsContainer" style="display: none;"></div>
+        <div id="resultsContainer" class="results-container">
+            <div class="loading"><div class="spinner"></div><p>✨ Mengambil data dari EDEPOINT...</p></div>
+        </div>
+    </div>
+
+    <div id="livegroupSection" style="display: none; flex-direction: column; flex: 1; overflow: hidden;">
+        <div class="section-header"><h3><i class="fas fa-users"></i> Live Group</h3><button id="openAddGroupModal" style="background:#22c55e; border:none; padding:6px 16px; border-radius:30px; color:#0a0c15; font-weight:600;"><i class="fas fa-plus"></i> Add</button></div>
+        <div class="livegroup-list" id="livegroupList"></div>
+    </div>
+
+    <div id="chatSection" style="display: none; flex-direction: column; flex: 1; overflow: hidden;">
+        <div class="section-header"><h3><i class="fas fa-comments"></i> Chat Publik</h3><span id="chatUserStatus" style="font-size:0.7rem; color:#86efac;"></span></div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Ketik pesan...">
+            <button id="sendChatBtn" style="background:#22c55e; border:none; padding:0 22px; border-radius:2rem; font-weight:600;">Kirim</button>
+        </div>
+    </div>
+
+    <div id="supportSection" style="display: none; flex-direction: column; flex: 1; overflow: hidden;">
+        <div class="section-header"><h3><i class="fas fa-headset"></i> SUPPORT & OWNER</h3></div>
+        <div class="support-list">
+            <div class="support-item">
+                <div class="support-icon"><i class="fab fa-telegram-plane"></i></div>
+                <div class="support-info">
+                    <h4>📢 CHANNEL OWNER</h4>
+                    <p>t.me/testibima12</p>
+                    <a href="https://t.me/testibima12" target="_blank" class="btn-join" style="margin-top:6px; display:inline-block;">Buka Channel</a>
+                </div>
+            </div>
+            <div class="support-item">
+                <div class="support-icon"><i class="fas fa-user-circle"></i></div>
+                <div class="support-info">
+                    <h4>👤 OWNER / ADMIN</h4>
+                    <p>t.me/bimastore12</p>
+                    <a href="https://t.me/bimastore12" target="_blank" class="btn-join" style="margin-top:6px;">Hubungi Owner</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-menu">
+        <div class="bottom-menu-item active" data-menu="search"><i class="fas fa-search"></i><span>Cari</span></div>
+        <div class="bottom-menu-item" data-menu="livegroup"><i class="fas fa-users"></i><span>Live Group</span></div>
+        <div class="bottom-menu-item" data-menu="support"><i class="fas fa-headset"></i><span>Support</span></div>
+        <div class="bottom-menu-item" data-menu="chat"><i class="fas fa-comments"></i><span>Chat</span></div>
+        <div class="bottom-menu-item" data-menu="apikey"><i class="fas fa-key"></i><span>API Key</span></div>
+        <div class="bottom-menu-item" id="adminMenuBtn"><i class="fas fa-cog"></i><span>Admin</span></div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal-overlay" id="apikeyViewModal"><div class="modal-menu"><div class="modal-header"><h3>🔑 API Key Aktif</h3></div><div class="login-panel"><div class="apikey-display" id="apikeyViewDisplay" style="background:rgba(0,0,0,0.4); border-radius:1rem; padding:12px; word-break:break-all;"></div><button id="copyApikeyViewBtn" class="login-btn">Salin API Key</button></div><div class="close-modal" id="closeApikeyViewModal">Tutup</div></div></div>
+<div class="modal-overlay" id="chatLoginModal"><div class="modal-menu"><div class="modal-header"><h3>💬 Login Chat</h3></div><div class="login-panel"><input type="text" id="chatNameInput" class="login-input" placeholder="Nama Anda"><button id="chatLoginBtn" class="login-btn">Mulai Chat</button><div id="chatLoginError" style="color:#ef4444; font-size:0.7rem; margin-top:8px;"></div></div><div class="close-modal" id="closeChatLoginModal">Batal</div></div></div>
+<div class="modal-overlay" id="addGroupModal"><div class="modal-menu"><div class="modal-header"><h3>➕ Tambah Live Group</h3></div><div class="login-panel"><input type="text" id="groupNameInput" class="login-input" placeholder="Nama Grup"><input type="text" id="groupLinkInput" class="login-input" placeholder="Link Grup WhatsApp"><textarea id="groupDescInput" class="login-input" rows="3" placeholder="Deskripsi"></textarea><button id="confirmAddGroupBtn" class="login-btn">Daftarkan</button><div id="addGroupMessage" style="color:#22c55e; font-size:0.7rem; margin-top:8px;"></div></div><div class="close-modal" id="closeAddGroupModal">Batal</div></div></div>
+<div class="modal-overlay" id="adminModal"><div class="modal-menu"><div class="modal-header"><h3>Admin Access</h3></div><div class="login-panel"><input type="password" id="secretCodeInput" class="login-input" placeholder="Code Secret"><button id="loginAdminBtn" class="login-btn">Login</button><div id="loginError" style="color:#ef4444; font-size:0.7rem; margin-top:8px;"></div></div><div class="close-modal" id="closeAdminModal">Tutup</div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    (function() {
+        // Particles
+        for (let i = 0; i < 60; i++) {
+            let p = document.createElement('div');
+            p.className = 'particle';
+            p.style.width = (Math.random() * 4 + 1) + 'px';
+            p.style.height = p.style.width;
+            p.style.left = Math.random() * 100 + '%';
+            p.style.animationDuration = Math.random() * 15 + 8 + 's';
+            p.style.animationDelay = Math.random() * 10 + 's';
+            document.getElementById('particles').appendChild(p);
+        }
+
+        // Config
+        const GROUPS_PER_PAGE = 10;
+        const MAX_GROUPS = 500;
+        const API_URL = "https://api.nexray.web.id/search/groupsor";
+        let GLOBAL_API_KEY = localStorage.getItem("wa_api_key") || "APIGAJDHBAJSUJAHE";
+        let SECRET_CODE = localStorage.getItem("admin_secret") || "ADMIN1216";
+
+        let allGroups = [];
+        let currentPage = 0;
+        let currentQuery = "";
+
+        let liveGroups = JSON.parse(localStorage.getItem("live_groups")) || [];
+        let chatUser = localStorage.getItem("chat_user") || null;
+        let chatMessages = JSON.parse(localStorage.getItem("chat_messages")) || [];
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;');
+        }
+
+        function showToast(msg) {
+            let t = document.createElement('div');
+            t.className = 'toast';
+            t.innerHTML = msg;
+            document.body.appendChild(t);
+            setTimeout(() => t.remove(), 2000);
+        }
+
+        window.copyLink = function(link) {
+            if (!link || link === '#') {
+                showToast("❌ Link tidak tersedia");
+                return;
+            }
+            navigator.clipboard.writeText(link).then(() => showToast("✅ Link disalin!"));
+        };
+
+        // Scroll to top function
+        function scrollToTop() {
+            const container = document.getElementById('resultsContainer');
+            if (container) {
+                container.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Fetch from EDEPOINT
+        async function fetchAllGroupsFromAPI(query) {
+            let collected = [];
+            let offset = 0;
+            const limit = 50;
+            let maxRequests = 12;
+
+            for (let attempts = 0; attempts < maxRequests && collected.length < MAX_GROUPS; attempts++) {
+                try {
+                    const response = await axios.get(API_URL, {
+                        params: {
+                            q: query,
+                            limit: limit,
+                            offset: offset
+                        },
+                        timeout: 20000,
+                        headers: {
+                            'X-API-Key': GLOBAL_API_KEY,
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    let batch = [];
+                    if (response.data?.data && Array.isArray(response.data.data)) batch = response.data.data;
+                    else if (Array.isArray(response.data)) batch = response.data;
+                    else if (response.data?.result && Array.isArray(response.data.result)) batch = response.data.result;
+                    else break;
+
+                    if (batch.length === 0) break;
+
+                    const formatted = batch.map(g => ({
+                        nama: g.name || g.nama || g.title || g.group_name || "Grup WhatsApp",
+                        desc: g.description || g.desc || g.deskripsi || "Bergabunglah untuk diskusi seru",
+                        link: g.link || g.url || g.invite || `https://chat.whatsapp.com/${Math.random().toString(36).substring(2, 10)}`,
+                        thumbnail: g.image || g.thumbnail || g.picture || `https://picsum.photos/id/${Math.floor(Math.random() * 70) + 1}/60/60`
+                    }));
+                    collected.push(...formatted);
+                    offset += limit;
+                    if (batch.length < limit) break;
+                } catch (e) {
+                    console.error("API Error:", e);
+                    break;
+                }
+            }
+            if (collected.length > MAX_GROUPS) collected = collected.slice(0, MAX_GROUPS);
+            return collected;
+        }
+
+        function renderGroups() {
+            const totalPages = Math.ceil(allGroups.length / GROUPS_PER_PAGE);
+            if (totalPages === 0) {
+                resultsContainer.innerHTML = `<div class="no-result"><i class="fas fa-frown"></i><p>Tidak ada grup ditemukan untuk "${escapeHtml(currentQuery)}"</p><button class="btn-reset" id="resetSearchBtn">Cari Lagi</button></div>`;
+                document.getElementById('resetSearchBtn')?.addEventListener('click', () => {
+                    searchInput.value = "";
+                    allGroups = [];
+                    resultsContainer.innerHTML = `<div class="loading"><div class="spinner"></div><p>✨ Masukkan kata kunci</p></div>`;
+                    document.getElementById('statsContainer').style.display = 'none';
+                });
+                return;
+            }
+            if (currentPage >= totalPages) currentPage = totalPages - 1;
+            if (currentPage < 0) currentPage = 0;
+
+            const start = currentPage * GROUPS_PER_PAGE;
+            const end = Math.min(start + GROUPS_PER_PAGE, allGroups.length);
+            const pageGroups = allGroups.slice(start, end);
+
+            const groupsHtml = pageGroups.map(group => `
+                <div class="group-card">
+                    <div class="group-card-inner">
+                        <img class="group-thumb" src="${group.thumbnail}" onerror="this.src='https://picsum.photos/id/20/60/60'">
+                        <div class="group-info">
+                            <div class="group-name"><i class="fab fa-whatsapp"></i> ${escapeHtml(group.nama)} <span class="group-category">#${currentQuery.substring(0, 15)}</span></div>
+                            <div class="desc-text">${escapeHtml(group.desc)}</div>
+                            <div class="link-group">
+                                <a href="${group.link}" target="_blank" class="btn-join" onclick="if(this.href==='#'){alert('Link tidak tersedia'); return false;}"><i class="fab fa-whatsapp"></i> JOIN</a>
+                                <button class="btn-copy" onclick="copyLink('${group.link}')"><i class="fas fa-copy"></i> Salin Link</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            const paginationHtml = `
+                <div class="pagination-nav">
+                    <button class="nav-arrow ${currentPage === 0 ? 'disabled' : ''}" id="prevPageBtn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="page-indicator">${currentPage + 1} / ${totalPages} • ${pageGroups.length} grup</div>
+                    <button class="nav-arrow ${currentPage === totalPages - 1 ? 'disabled' : ''}" id="nextPageBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <button class="btn-reset" id="resetSearchBtn"><i class="fas fa-undo-alt"></i> Cari Lagi</button>
+            `;
+            resultsContainer.innerHTML = groupsHtml + paginationHtml;
+
+            // Scroll to top after render
+            scrollToTop();
+
+            document.getElementById('prevPageBtn')?.addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    renderGroups();
+                }
+            });
+            document.getElementById('nextPageBtn')?.addEventListener('click', () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    renderGroups();
+                }
+            });
+            document.getElementById('resetSearchBtn')?.addEventListener('click', () => {
+                searchInput.value = "";
+                allGroups = [];
+                resultsContainer.innerHTML = `<div class="loading"><div class="spinner"></div><p>✨ Masukkan kata kunci</p></div>`;
+                document.getElementById('statsContainer').style.display = 'none';
+            });
+
+            setupSwipe();
+        }
+
+        // Swipe dengan scroll ke atas otomatis
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        function setupSwipe() {
+            const container = document.getElementById('resultsContainer');
+            if (!container) return;
+
+            // Remove old listeners and add new ones
+            container.removeEventListener('touchstart', handleTouchStart);
+            container.removeEventListener('touchend', handleTouchEnd);
+            container.addEventListener('touchstart', handleTouchStart);
+            container.addEventListener('touchend', handleTouchEnd);
+        }
+
+        function handleTouchStart(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }
+
+        function handleTouchEnd(e) {
+            const touchEndX = e.changedTouches[0].screenX;
+            const touchEndY = e.changedTouches[0].screenY;
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+
+            // Only trigger swipe if horizontal movement > vertical movement
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+                const totalPages = Math.ceil(allGroups.length / GROUPS_PER_PAGE);
+                if (diffX > 0 && currentPage > 0) {
+                    currentPage--;
+                    renderGroups();
+                } else if (diffX < 0 && currentPage < totalPages - 1) {
+                    currentPage++;
+                    renderGroups();
+                }
+            }
+        }
+
+        async function performSearch(query) {
+            if (!query.trim()) {
+                resultsContainer.innerHTML = `<div class="no-result"><i class="fas fa-search"></i><p>Masukkan kata kunci!</p></div>`;
+                return;
+            }
+            currentQuery = query.trim();
+            resultsContainer.innerHTML = `<div class="loading"><div class="spinner"></div><p>🔍 Mencari "${escapeHtml(currentQuery)}" di EDEPOINT...</p><p style="font-size:0.7rem;">⚡ Mengumpulkan maksimal 500 grup (10 per halaman)</p></div>`;
+
+            allGroups = await fetchAllGroupsFromAPI(currentQuery);
+            currentPage = 0;
+
+            const totalPages = Math.ceil(allGroups.length / GROUPS_PER_PAGE);
+            const statsDiv = document.getElementById('statsContainer');
+            statsDiv.innerHTML = `
+                <div class="stats-bar">
+                    <div class="stats-left">
+                        <span class="total-badge"><i class="fas fa-users"></i> ${allGroups.length} Grup</span>
+                        <span class="total-badge"><i class="fas fa-layer-group"></i> ${totalPages} Halaman</span>
+                    </div>
+                    <span><i class="fas fa-tag"></i> ${escapeHtml(currentQuery)}</span>
+                    <span class="total-badge"><i class="fas fa-database"></i> EDEPOINT</span>
+                </div>
+            `;
+            statsDiv.style.display = 'block';
+            renderGroups();
+        }
+
+        // Live Group Functions
+        function saveLiveGroups() {
+            localStorage.setItem("live_groups", JSON.stringify(liveGroups));
+            renderLiveGroups();
+        }
+
+        function addLiveGroup(name, link, desc) {
+            if (!name.trim()) return false;
+            liveGroups.unshift({
+                id: Date.now(),
+                name: name.trim(),
+                link: link.trim() || "#",
+                desc: desc.trim() || "Tidak ada deskripsi",
+                addedAt: new Date().toISOString()
+            });
+            saveLiveGroups();
+            return true;
+        }
+
+        function renderLiveGroups() {
+            const container = document.getElementById('livegroupList');
+            if (!container) return;
+            if (liveGroups.length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding:40px; color:#6c7293;"><i class="fas fa-users"></i><p>Belum ada grup. Klik "Add Group"</p></div>';
+                return;
+            }
+            container.innerHTML = liveGroups.map(g => `
+                <div class="group-card" style="margin-bottom:10px;">
+                    <div class="group-card-inner">
+                        <div class="group-info">
+                            <div class="group-name"><i class="fab fa-whatsapp"></i> ${escapeHtml(g.name)}</div>
+                            <div class="desc-text">${escapeHtml(g.desc)}</div>
+                            <div class="link-group">
+                                <a href="${g.link}" target="_blank" class="btn-join">JOIN</a>
+                                <button class="btn-copy" onclick="copyLink('${g.link}')">Salin Link</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Chat Functions
+        function renderChatMessages() {
+            const container = document.getElementById('chatMessages');
+            if (!container) return;
+            container.innerHTML = chatMessages.slice(-50).map(msg => `
+                <div class="message ${msg.user === chatUser ? 'message-own' : 'message-other'}" style="align-self: ${msg.user === chatUser ? 'flex-end' : 'flex-start'}">
+                    <div class="message-name" style="font-size:0.6rem; font-weight:600;">${escapeHtml(msg.user)}</div>
+                    <div class="message-text">${escapeHtml(msg.text)}</div>
+                    <div class="message-time" style="font-size:0.5rem; opacity:0.6;">${msg.time}</div>
+                </div>
+            `).join('');
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function sendMessage(text) {
+            if (!text.trim() || !chatUser) return;
+            const now = new Date();
+            const timeStr = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+            chatMessages.push({
+                user: chatUser,
+                text: text.trim(),
+                time: timeStr,
+                timestamp: now.getTime()
+            });
+            if (chatMessages.length > 200) chatMessages = chatMessages.slice(-150);
+            localStorage.setItem("chat_messages", JSON.stringify(chatMessages));
+            renderChatMessages();
+            document.getElementById('chatInput').value = '';
+        }
+
+        // Navigation
+        const sections = {
+            search: document.getElementById('searchSection'),
+            livegroup: document.getElementById('livegroupSection'),
+            chat: document.getElementById('chatSection'),
+            support: document.getElementById('supportSection')
+        };
+
+        document.querySelectorAll('.bottom-menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const menu = item.getAttribute('data-menu');
+                if (menu === 'apikey') {
+                    document.getElementById('apikeyViewDisplay').innerHTML = `<strong>${GLOBAL_API_KEY}</strong>`;
+                    document.getElementById('apikeyViewModal').classList.add('active');
+                    return;
+                }
+                if (menu === 'admin') return;
+
+                document.querySelectorAll('.bottom-menu-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                Object.values(sections).forEach(sec => {
+                    if (sec) sec.style.display = 'none';
+                });
+
+                if (menu === 'search') sections.search.style.display = 'flex';
+                else if (menu === 'livegroup') {
+                    sections.livegroup.style.display = 'flex';
+                    renderLiveGroups();
+                } else if (menu === 'chat') {
+                    sections.chat.style.display = 'flex';
+                    if (!chatUser) document.getElementById('chatLoginModal').classList.add('active');
+                    else {
+                        document.getElementById('chatUserStatus').innerHTML = `<i class="fas fa-user"></i> ${escapeHtml(chatUser)}`;
+                        renderChatMessages();
+                    }
+                } else if (menu === 'support') sections.support.style.display = 'flex';
+            });
+        });
+
+        // Event Listeners
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const resultsContainer = document.getElementById('resultsContainer');
+
+        searchBtn.addEventListener('click', () => performSearch(searchInput.value.trim()));
+        searchInput.addEventListener('keypress', e => {
+            if (e.key === 'Enter') performSearch(e.target.value.trim());
+        });
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                const q = tag.getAttribute('data-query');
+                searchInput.value = q;
+                performSearch(q);
+            });
+        });
+
+        document.getElementById('chatLoginBtn').addEventListener('click', () => {
+            const name = document.getElementById('chatNameInput').value.trim();
+            if (!name) {
+                document.getElementById('chatLoginError').textContent = 'Nama harus diisi!';
+                return;
+            }
+            chatUser = name;
+            localStorage.setItem("chat_user", name);
+            document.getElementById('chatLoginModal').classList.remove('active');
+            document.getElementById('chatUserStatus').innerHTML = `<i class="fas fa-user"></i> ${escapeHtml(chatUser)}`;
+            renderChatMessages();
+            showToast(`Selamat datang ${name}!`);
+        });
+        document.getElementById('sendChatBtn').addEventListener('click', () => {
+            if (!chatUser) document.getElementById('chatLoginModal').classList.add('active');
+            else sendMessage(document.getElementById('chatInput').value);
+        });
+        document.getElementById('chatInput').addEventListener('keypress', e => {
+            if (e.key === 'Enter') document.getElementById('sendChatBtn').click();
+        });
+        document.getElementById('copyApikeyViewBtn').addEventListener('click', () => {
+            navigator.clipboard.writeText(GLOBAL_API_KEY).then(() => showToast("✅ API Key disalin!"));
+        });
+        document.getElementById('closeApikeyViewModal').addEventListener('click', () => document.getElementById('apikeyViewModal').classList.remove('active'));
+        document.getElementById('closeChatLoginModal').addEventListener('click', () => document.getElementById('chatLoginModal').classList.remove('active'));
+
+        // Add Group Modal
+        document.getElementById('openAddGroupModal').addEventListener('click', () => document.getElementById('addGroupModal').classList.add('active'));
+        document.getElementById('closeAddGroupModal').addEventListener('click', () => document.getElementById('addGroupModal').classList.remove('active'));
+        document.getElementById('confirmAddGroupBtn').addEventListener('click', () => {
+            const name = document.getElementById('groupNameInput').value.trim();
+            const link = document.getElementById('groupLinkInput').value.trim();
+            const desc = document.getElementById('groupDescInput').value.trim();
+            if (!name) {
+                document.getElementById('addGroupMessage').textContent = '❌ Nama harus diisi!';
+                return;
+            }
+            if (addLiveGroup(name, link, desc)) {
+                document.getElementById('addGroupMessage').textContent = '✅ Grup ditambahkan!';
+                document.getElementById('groupNameInput').value = '';
+                document.getElementById('groupLinkInput').value = '';
+                document.getElementById('groupDescInput').value = '';
+                setTimeout(() => {
+                    document.getElementById('addGroupModal').classList.remove('active');
+                    document.getElementById('addGroupMessage').textContent = '';
+                }, 1500);
+                if (sections.livegroup.style.display === 'flex') renderLiveGroups();
+            } else {
+                document.getElementById('addGroupMessage').textContent = '❌ Gagal!';
+            }
+        });
+
+        // Admin
+        document.getElementById('adminMenuBtn').addEventListener('click', () => document.getElementById('adminModal').classList.add('active'));
+        document.getElementById('closeAdminModal').addEventListener('click', () => document.getElementById('adminModal').classList.remove('active'));
+        document.getElementById('loginAdminBtn').addEventListener('click', () => {
+            const code = document.getElementById('secretCodeInput').value;
+            if (code === SECRET_CODE) {
+                const newKey = prompt("Masukkan API Key baru (min 8 karakter):", GLOBAL_API_KEY);
+                if (newKey && newKey.length >= 8) {
+                    GLOBAL_API_KEY = newKey;
+                    localStorage.setItem("wa_api_key", newKey);
+                    showToast("✅ API Key berhasil diubah!");
+                }
+                document.getElementById('adminModal').classList.remove('active');
+            } else {
+                document.getElementById('loginError').textContent = '❌ Code Secret salah!';
+            }
+        });
+
+        // Initial load
+        if (chatUser) {
+            document.getElementById('chatUserStatus').innerHTML = `<i class="fas fa-user"></i> ${escapeHtml(chatUser)}`;
+            renderChatMessages();
+        }
+        renderLiveGroups();
+        performSearch("jual beli");
+    })();
+</script>
+</body>
+</html>
